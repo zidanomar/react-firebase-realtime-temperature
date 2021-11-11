@@ -1,13 +1,70 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&display=swap');
+
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Mochiy Pop P One', sans-serif;
+  font-size: 16;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.container {
+  height: 100vh;
+  width: 100%;
+  max-width: 33.75rem;
+  margin: 0 auto;
+  padding: 2rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 1s ease-in-out;
+}
+
+.cold {
+  background-color: #5EDFFF;
+  color: #095264;
+}
+
+.warm {
+  background-color: #F98404;
+  color: #8a4f11;
+}
+
+.hot {
+  background-color: #FF2626;
+  color: #750e0e;
+}
+
+.text-classes {
+  text-align: center;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+h1 > span {
+  font-size: 1.5rem;
+}
+
+.text-changed {
+  animation: transition 1s ease-out;
+}
+
+@keyframes transition {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
